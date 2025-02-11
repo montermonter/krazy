@@ -1,0 +1,166 @@
+body {
+    background-color: #190f00;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: rotate(10deg) scale(0.5);
+    }
+    50% {
+      transform: rotate(-10deg) scale(0.5);
+    }
+    100% {
+      transform: rotate(10deg) scale(0.5);
+    }
+  }
+  
+  .lantern {
+    z-index: 999;
+    position: absolute;
+    height: 70px;
+    width: 50px;
+    transform-origin: top center;
+    animation: shake 4s ease-in-out infinite;
+  }
+  
+  @keyframes outerlightbreathe {
+    0% {
+      height: 100px;
+      width: 100px;
+      top: -10px;
+      left: -20px;
+    }
+    50% {
+      height: 200px;
+      width: 200px;
+      top: -60px;
+      left: -70px;
+    }
+    100% {
+      height: 100px;
+      width: 100px;
+      top: -10px;
+      left: -20px;
+    }
+  }
+  
+  .outerLight {
+    z-index: -1;
+    position: absolute;
+    background-image: radial-gradient(rgba(117, 107, 60, 1.0), rgba(117, 107, 60, 0.0), rgba(117, 107, 60, 0.0));
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: outerlightbreathe 3s ease-in-out infinite;
+  }
+  
+  .lanternBody {
+    position: absolute;
+    background-color: #756b3c;
+    height: 70px;
+    width: 50px;
+    border-radius: 15px 15px 25px 25px;
+  }
+  
+  @keyframes innerlightbreathe {
+    0% {
+      height: 30px;
+      width: 30px;
+      opacity: 0.1;
+      top: 35px;
+      left: 10px;
+    }
+    20% {
+      clip-path: inset(0px 0px 0px 0px);
+    }
+    50% {
+      height: 60px;
+      width: 60px;
+      opacity: 0.5;
+      top: 5px;
+      left: -5px;
+      clip-path: inset(0px 5px 0px 5px);
+    }
+    80% {
+      clip-path: inset(0px 0px 0px 0px);
+    }
+    100% {
+      height: 30px;
+      width: 30px;
+      opacity: 0.1;
+      top: 35px;
+      left: 10px;
+    }
+  }
+  
+  .innerLight {
+    position: absolute;
+    background-image: radial-gradient(rgba(255, 241, 181, 1.0), rgba(255, 241, 181, 1.0), rgba(255, 241, 181, 0.0));
+    border-radius: 50%;
+    animation: innerlightbreathe 3s ease-in-out infinite;
+  }
+  
+  .wordInput, .fakeInput {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
+  
+  .wordInput {
+    height: 30px;
+    width: 100px;
+    color: #a88600;
+    font-size: 25px;
+    font-family: Arial;
+    text-align: center;
+    border: 3px;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #fff9e5;
+    border-color: #fff9e5;
+    animation: fadein 1s ease-in;
+  }
+  
+  .wordInput:hover, .wordInput:focus {
+    border-color: #a88600;
+  }
+  
+  .fakeInput {
+    height: 30px;
+    width: 100px;
+    color: #a88600;
+    font-size: 25px;
+    font-family: Arial;
+    text-align: center;
+    border: 3px;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #fff9e5;
+    border-color: #fff9e5;
+    animation: fadeout 2s ease-out;
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 1.0;
+    }
+  }
+  
+  @keyframes fadeout {
+    0% {
+      opacity: 1.0;
+    }
+    50% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 0.0;
+    }
+  }
+
+  #wordBox {
+    display: none;
+}
+

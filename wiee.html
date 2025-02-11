@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <title>ALYSHA&lt;3</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .bottom-container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .bottom-text {
+      color: rgb(241, 241, 103);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .bottom-image {
+      width: 150px; 
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<audio id="bgMusic" autoplay loop muted>
+  <source src="rectangle.mp3" type="audio/mpeg">
+</audio>
+
+<div class="bottom-container">
+  <img src="images/myaly.png" alt="PLEASE" class="bottom-image">
+  <p class="bottom-text">Will you still be my valentine Aly?</p>
+</div>
+
+  <input id="wordBox" class="wordInput" type="text" maxlength="6" value="ILIKEU" onkeypress="return (event.charCode > 64 && event.charCode < 91)">
+  <script src="https://cdn.jsdelivr.net/npm/kd-tree-javascript@1.0.3/kdTree.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

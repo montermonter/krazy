@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be my valentine Aly</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            font-size: 16px;
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+        #yesBtn:hover {
+            background-color: #218838;
+        }
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+        }
+        #noBtn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/chiikawa.png" alt="Chiikawa" style="width: 150px; margin-bottom: 20px;">
+    <h2>Can you be my valentine-less Aly?</h2>
+    <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+        let yesBtn = document.getElementById("yesBtn");
+        let noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("click", function() {
+            noClickCount++;
+            yesBtn.style.fontSize = (16 + noClickCount * 5) + "px"; 
+            if (noClickCount > 3) {
+                window.location.href = "valentine2.html"; 
+            }
+        });
+    </script>
+</body>
+</html>
